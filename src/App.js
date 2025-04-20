@@ -4,7 +4,7 @@ function App() {
   const [quote, setQuote] = useState("Loading...");
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/quote")
+    fetch("https://qgs.vercel.app/api/quote")
       .then(res => res.json())
       .then(data => setQuote(data.quote))
       .catch(err => setQuote("Failed to fetch quote."));
